@@ -122,7 +122,7 @@
     <h2>Contact Us</h2>
     <p>Fill out the form below and we'll get back to you as soon as possible.</p>
 
-    <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+    <form name="contact" method="POST" data-netlify="true" id="contact-form">
       <input type="hidden" name="form-name" value="contact" />
 
       <label for="name">Name</label>
@@ -144,6 +144,25 @@
   <footer>
     &copy; 2025 White Table Finance. All rights reserved.
   </footer>
+
+  <script>
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const encoded = new URLSearchParams(formData).toString();
+
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encoded,
+      });
+
+      window.location.href = "thank-you.html";
+    });
+  </script>
 
 </body>
 </html>
