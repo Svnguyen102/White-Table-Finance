@@ -10,25 +10,35 @@
       background-color: #f3f2ef;
       color: #1f1f1f;
     }
+
     header {
       background-color: #ffffff;
       border-bottom: 2px solid #c5b27e;
       text-align: center;
       padding: 2rem 1rem 1rem;
     }
+
+    header a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     header img {
       max-width: 150px;
     }
+
     h1 {
       margin: 0.5rem 0 0;
       font-size: 2rem;
       color: #1f1f1f;
     }
+
     nav {
       background-color: #ffffff;
       text-align: center;
       padding: 1rem 0;
     }
+
     nav a {
       margin: 0 1rem;
       text-decoration: none;
@@ -36,22 +46,27 @@
       color: #1f1f1f;
       border-bottom: 2px solid transparent;
     }
+
     nav a:hover {
       border-bottom: 2px solid #c5b27e;
     }
+
     main {
       padding: 2rem;
       max-width: 600px;
       margin: auto;
     }
+
     form {
       display: flex;
       flex-direction: column;
     }
+
     label {
       margin-top: 1rem;
       font-weight: bold;
     }
+
     input, textarea {
       padding: 0.5rem;
       font-size: 1rem;
@@ -59,6 +74,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+
     button {
       margin-top: 1.5rem;
       padding: 0.75rem;
@@ -69,9 +85,11 @@
       cursor: pointer;
       border-radius: 5px;
     }
+
     button:hover {
       background-color: #a28f63;
     }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -83,23 +101,27 @@
   </style>
 </head>
 <body>
+
   <header>
-    <a href="index.html" style="text-decoration: none; color: inherit;">
+    <a href="index.html">
       <img src="WTFlogo.webp" alt="White Table Finance Logo" />
       <h1>WHITE TABLE FINANCE</h1>
     </a>
   </header>
+
   <nav>
     <a href="real-estate.html">Real Estate</a>
     <a href="home-loans.html">Home Loans</a>
     <a href="tax.html">Tax Services</a>
     <a href="photography.html">Photography</a>
-    <a href="index.html">Home</a>
     <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
   </nav>
+
   <main>
     <h2>Contact Us</h2>
     <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+    
     <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
@@ -116,8 +138,11 @@
       <button type="submit">Send Message</button>
     </form>
   </main>
+
   <footer>
     &copy; 2025 White Table Finance. All rights reserved.
   </footer>
+
 </body>
 </html>
+
