@@ -118,46 +118,35 @@
     <a href="index.html">Home</a>
   </nav>
 
- <main>
-  <h2>Contact Us</h2>
-  <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+  <main>
+    <h2>Contact Us</h2>
+    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
 
-  <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
-    <!-- Required hidden input for Netlify Forms -->
-    <input type="hidden" name="form-name" value="contact" />
+    <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+      <input type="hidden" name="form-name" value="contact" />
 
-    <!-- ✅ Honeypot spam trap (add this right below form-name!) -->
-    <input type="text" name="hidden-field" style="display:none" tabindex="-1" autocomplete="off" />
+      <!-- Honeypot Field for Spam Protection -->
+      <input type="text" name="hidden-field" style="display:none" tabindex="-1" autocomplete="off" />
 
-    <!-- Your visible form fields -->
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
-</main>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
 
-
-
-   <footer>
+  <footer>
     &copy; 2025 White Table Finance. All rights reserved.
   </footer>
 
-  <!-- Invisible dummy form for Netlify to detect -->
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="form-name" value="contact" />
-  </form>
-
 </body>
 </html>
-
-
